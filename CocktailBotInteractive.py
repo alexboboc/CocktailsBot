@@ -87,5 +87,4 @@ class CocktailBotInteractive(CocktailBot):
 
 
 if __name__ == "__main__":
-    print(CocktailBotInteractive().execute_action("make me an amaretto sour"))
-    #CocktailBotInteractive().listen()
+    CocktailBotInteractive().listen()

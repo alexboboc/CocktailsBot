@@ -71,7 +71,9 @@ class CocktailBotInteractive(CocktailBot):
                     # Try to satisfy user's query (or discard if it's regular comment)
                     answer = self.execute_action(tweet_text)
                     if answer:
+                        # Tweets need explicit @ mention, even if it doesn't increase count
                         answer["sheet"] = "@{}\n{}".format(tweet_user, answer["sheet"])
+                        answer["instructions"] = ["@{} {}".format(tweet_user, instruction) for instruction in answer["instructions"]]
                         self.post_tweet(answer, in_reply_to=tweet_id)
                 except:
                     # Notify user that query could not be fulfilled
@@ -85,4 +87,5 @@ class CocktailBotInteractive(CocktailBot):
 
 
 if __name__ == "__main__":
-    CocktailBotInteractive().listen()
+    print(CocktailBotInteractive().execute_action("make me an amaretto sour"))
+    #CocktailBotInteractive().listen()

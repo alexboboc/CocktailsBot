@@ -59,7 +59,6 @@ class CocktailBot:
         return choice
 
     
-    
     def extract_name(self, data):
         # Safely return the drink's name
         candidate = data["strDrink"]

@@ -1,3 +1,5 @@
+# Create directory for thumbnails
 mkdir thumbnails
-python3 -m pip install twitter
-python3 -m pip pymongo
+
+# Install python dependencies
+python3 -m pip install twitter pymongo

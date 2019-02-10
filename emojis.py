@@ -107,6 +107,7 @@ EMOJI_MAP = {
     "Pisco": u'\U0001F943',
     "Irish cream": u'\U0001F943',
     "Ale": u'\U0001F37A',
+    "Ginger ale": u'\U0001F37A',
     "Chocolate liqueur": u'\U0001F943',
     "Midori melon liqueur": u'\U0001F943',
     "Sambuca": u'\U0001F943',
@@ -196,10 +197,13 @@ EMOJI_MAP = {
     "Coconut": u'\U0001F965',
     "Nutmeg": u'\U0001F330',
     "Almond": u'\U0001F330',
+    "Almond flavoring": u'\U0001F330',
     "Blackcurrant": u'\U0001F347',
     "Blackberries": u'\U0001F347',
     "Cream": u'\U0001F95B',
     "Blackberry": u'\U0001F347',
     "Coloring": u'\U0001F308',
-    "Cassis": u'\U0001F347'
+    "Cassis": u'\U0001F347',
+    "Tabasco": u'\U0001F525',
+    "Tabasco sauce": u'\U0001F525'
 }

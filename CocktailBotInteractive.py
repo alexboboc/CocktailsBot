@@ -65,6 +65,7 @@ class CocktailBotInteractive(CocktailBot):
 
                 # Check if request has been fulfilled
                 if self.is_result_processed(tweet_id):
+                    print("Tweet {} by {} was already processed ({})".format(tweet_id, tweet_user, tweet_text))
                     continue
 
                 try:

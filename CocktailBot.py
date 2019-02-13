@@ -129,9 +129,10 @@ class CocktailBot:
         emojified = []
         for measure, ingredient in ingredients:
             ingredient_line = "{} {}".format(measure, ingredient).strip()
+            ingredient_key = ingredient.lower()
             # Check if ingredient is in emoji map
-            if ingredient in EMOJI_MAP.keys():
-                emojified.append("{} {}".format(EMOJI_MAP[ingredient].strip(), ingredient_line))
+            if ingredient_key in EMOJI_MAP.keys():
+                emojified.append("{} {}".format(EMOJI_MAP[ingredient_key].strip(), ingredient_line))
             # Assign default emoji otherwise
             else:
                 emojified.append("{} {}".format(EMOJI_MAP["default"].strip(), ingredient_line))

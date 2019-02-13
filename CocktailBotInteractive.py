@@ -69,6 +69,9 @@ class CocktailBotInteractive(CocktailBot):
                     print(log.encode('utf-8'))
                     continue
 
+                log = "Processing tweet {} by {} ({})".format(tweet_id, tweet_user, tweet_text)
+                print(log.encode('utf-8'))
+
                 try:
                     # Try to satisfy user's query (or discard if it's regular comment)
                     answer = self.execute_action(tweet_text)
@@ -86,6 +89,7 @@ class CocktailBotInteractive(CocktailBot):
                 # Log process completed
                 self.flag_result_processed(tweet_id)
 
+            print("Sleeping...")
             time.sleep(self.POLLING_SLEEP_TIME)
 
 

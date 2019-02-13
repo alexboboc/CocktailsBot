@@ -75,7 +75,8 @@ class CocktailBotInteractive(CocktailBot):
                         answer["sheet"] = "@{}\n{}".format(tweet_user, answer["sheet"])
                         answer["instructions"] = ["@{} {}".format(tweet_user, instruction) for instruction in answer["instructions"]]
                         self.post_tweet(answer, in_reply_to=tweet_id)
-                except:
+                except Exception as e:
+                    print(e)
                     # Notify user that query could not be fulfilled
                     response = "@{} {}".format(tweet_user, self.SOMETHING_WENT_WRONG_REPLY)
                     self.TWITTER.statuses.update(status=response, in_reply_to=tweet_id)

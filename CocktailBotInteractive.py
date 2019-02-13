@@ -63,6 +63,11 @@ class CocktailBotInteractive(CocktailBot):
                 tweet_user = result["user"]["screen_name"]
                 tweet_text = result["text"].lower().replace(self.USERNAME, "").strip()
 
+                # Discard mentions coming from @CocktailsBot
+                if tweet_user.lower() == self.USERNAME:
+                    print("Tweet issued by @{}".format(self.USERNAME))
+                    continue
+
                 # Check if request has been fulfilled
                 if self.is_result_processed(tweet_id):
                     log = "Tweet {} by {} was already processed ({})".format(tweet_id, tweet_user, tweet_text)

@@ -1,4 +1,4 @@
-# Cocktails Bot
+# :tropical_drink: Cocktails Bot
 
 This repository contains the code behind [@CocktailsBot](https://twitter.com/CocktailsBot), a Twitter bot that **posts a beautifully formatted cocktail recipe every few hours**.
 

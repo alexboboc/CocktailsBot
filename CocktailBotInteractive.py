@@ -84,8 +84,10 @@ class CocktailBotInteractive(CocktailBot):
                     print(e)
                     # Notify user that query could not be fulfilled
                     response = "@{} {}".format(tweet_user, self.SOMETHING_WENT_WRONG_REPLY)
-                    self.TWITTER.statuses.update(status=response, in_reply_to=tweet_id)
-                    pass
+                    try:
+                        self.TWITTER.statuses.update(status=response, in_reply_to=tweet_id)
+                    except:
+                        pass
 
                 # Log process completed
                 self.flag_result_processed(tweet_id)

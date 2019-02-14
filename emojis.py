@@ -67,7 +67,7 @@ EMOJI_MAP = {
     "pineapple": u'\U0001F34D',
     "pineapple syrup": u'\U0001F34D',
     "lemon juice": u'\U0001F34B',
-    "lugar syrup": u'\U0001F36C',
+    "sugar syrup": u'\U0001F36C',
     "brown sugar": u'\U0001F36C',
     "milk": u'\U0001F95B',
     "strawberries": u'\U0001F353',

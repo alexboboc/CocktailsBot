@@ -1,0 +1,10 @@
+FROM python:3.6-alpine
+
+COPY CocktailBot.py /
+COPY CocktailBotInteractive.py /
+COPY emojis.py /
+
+RUN pip install twitter pymongo
+RUN mkdir thumbnails
+
+ENTRYPOINT [ "python", "CocktailBotInteractive.py" ]

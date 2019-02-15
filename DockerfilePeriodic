@@ -1,0 +1,9 @@
+FROM python:3.6-alpine
+
+COPY CocktailBot.py /
+COPY emojis.py /
+
+RUN pip install twitter
+RUN mkdir thumbnails
+
+ENTRYPOINT [ "python", "CocktailBot.py" ]

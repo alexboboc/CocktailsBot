@@ -1,0 +1,12 @@
+version: '2'
+services:
+  cocktailsbotperiodic:
+    build:
+      context: .
+      dockerfile: DockerfilePeriodic
+    image: cocktailsbot:periodic
+  cocktailsbotinteractive:
+    build:
+      context: .
+      dockerfile: DockerfileInteractive
+    image: cocktailsbot:interactive
